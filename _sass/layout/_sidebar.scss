@@ -323,3 +323,9 @@
     }
   }
 }
+.author__employer {
+  font-size: 0.85em;        // 字体改小
+  white-space: normal !important;
+  word-break: break-word;
+  line-height: 1.4;
+}
