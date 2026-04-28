@@ -244,88 +244,48 @@
     }
   }
 }
-
-.author__urls {
-  display: none;
-  position: absolute;
-  right: 0;
-  margin-top: 15px;
-  padding: 10px;
-  list-style-type: none;
-  border: 1px solid var(--global-border-color);
-  border-radius: $border-radius;
-  background: var(--global-bg-color);
-  z-index: -1;
-  box-shadow: 0 0 10px rgba(#000, 0.25);
-  cursor: default;
-
-  @include breakpoint($large) {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  &:before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: var(--global-border-color) transparent;
-    z-index: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
-
-  &:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #fff transparent;
-    z-index: 1;
-
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
-
-  li {
+ li {
     word-break: break-word;
   }
 
   a {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     color: inherit;
     font-size: $type-size-5;
     text-decoration: none;
-     white-space: nowrap;  
+    white-space: nowrap;
 
     &:hover {
       text-decoration: underline;
     }
   }
 }
+
+/* 修复侧边栏底部内容被截断 */
+.sidebar {
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    overflow-x: hidden;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+  }
+  
+  .author__content {
+    margin-bottom: 0.5em;
+  }
+  
+  .author__bio {
+    margin-bottom: 10px;
+  }
+}
+
 .author__employer {
-  font-size: 0.85em;        // 字体改小
+  font-size: 0.8em;
   white-space: normal !important;
   word-break: break-word;
-  line-height: 1.4;
+  line-height: 1.3;
+  margin-bottom: 2px !important;
 }
