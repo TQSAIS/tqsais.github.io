@@ -1,14 +1,16 @@
 ---
-title: "Paper Title Number 1"
+title: "Weakly-Supervised Lung Nodule Segmentation in CT with One-Click Annotation"
 collection: publications
-category: manuscripts
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
-paperurl: 'https://academicpages.github.io/files/paper1.pdf'
-bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+category: conferences
+permalink: /publication/2026-04-10-weakly-supervised-lung-nodule
+date: 2026-04-10
+venue: '2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI 2026)'
+venue_short: 'ISBI 2026'
+location: 'London, United Kingdom'
+authors: '<b>Tianyi Qu</b>, Dichao Liu<sup>†</sup>, Ze Jin, Yuqiao Yang, Kenji Suzuki'
+core_image: '/images/ISBI2026.png'
+venue_logo: '/images/isbi.png'
+paperurl: 'https://tqsais.github.io/files/ISBI2026.pdf'
 ---
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+
+Using [MathJax](https://www.mathjax.org/) in the description is supported.
