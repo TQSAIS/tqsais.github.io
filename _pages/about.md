@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Tianyi Qu"
+title: "Tianyi Qu's Homepage"
 author_profile: true
 redirect_from: 
   - /about/
