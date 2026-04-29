@@ -12,5 +12,3 @@ core_image: '/images/ISBI2026.png'
 venue_logo: '/images/isbi2026.png'
 paperurl: 'https://tqsais.github.io/files/ISBI2026.pdf'
 ---
-
-Using [MathJax](https://www.mathjax.org/) in the description is supported.
