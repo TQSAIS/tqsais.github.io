@@ -27,8 +27,8 @@
     {% endif %}
 
     {% if post.collection == 'publications' %}
-      <!-- 学术卡片排版 -->
-      <div class="publication-card">
+      <!-- 列表页：精简信息 -->
+      <div class="publication-list-item">
         <h2 class="publication-title" itemprop="headline">
           {% if post.link %}
             <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
@@ -41,39 +41,7 @@
           <p class="publication-authors">{{ post.authors | markdownify }}</p>
         {% endif %}
         
-        <div class="publication-body">
-          <div class="publication-image">
-            {% if post.core_image %}
-              <img src="{{ post.core_image | prepend: base_path }}" alt="{{ post.title }}">
-            {% elsif teaser %}
-              <img src=
-                {% if teaser contains "://" %}
-                  "{{ teaser }}"
-                {% else %}
-                  "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-                {% endif %}
-                alt="">
-            {% endif %}
-          </div>
-          
-          <div class="publication-info">
-            <div class="info-text">
-              <p class="venue-name">{{ post.venue }}</p>
-              <p class="venue-location">{{ post.date | default: "1900-01-01" | date: "%Y.%m.%d" }}, {{ post.location }}</p>
-            </div>
-            {% if post.venue_logo %}
-              <img class="venue-logo" src="{{ post.venue_logo | prepend: base_path }}" alt="{{ post.venue }}">
-            {% endif %}
-          </div>
-        </div>
-        
-        {% if post.excerpt %}
-          <p class="publication-excerpt">{{ post.excerpt | markdownify }}</p>
-        {% endif %}
-        
-        {% if post.paperurl %}
-          <p class="publication-links"><a href="{{ post.paperurl }}"><i class="fa fa-file-pdf" aria-hidden="true"></i> Download Paper</a></p>
-        {% endif %}
+        <p class="publication-venue">{{ post.venue }}</p>
       </div>
       
     {% else %}
