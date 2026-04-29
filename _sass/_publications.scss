@@ -1,8 +1,30 @@
-/* 列表页精简样式 */
+/* ==========================================================================
+   PUBLICATION LIST (列表页精简样式 + 缩略图)
+   ========================================================================== */
+
 .publication-list-item {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
   margin-bottom: 1.5em;
   padding-bottom: 1em;
   border-bottom: 1px solid var(--global-border-color);
+
+  .publication-thumb {
+    flex: 0 0 120px;           // 缩略图固定宽度
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+    }
+  }
+
+  .publication-meta {
+    flex: 1;
+    min-width: 0;
+  }
 
   .publication-title {
     margin: 0 0 0.3em;
@@ -40,24 +62,12 @@
     font-style: italic;
   }
 }
-  .publication-image {
-    flex: 0 0 100px;
 
-    @media (max-width: 768px) {
-      flex: 0 0 auto;
-      width: 100%;
-    }
 
-    img {
-      width: 100%;
-      max-width: 100px;    // 添加：限制最大宽度
-      height: auto;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-  }
+/* ==========================================================================
+   PUBLICATION DETAIL (详情页完整卡片样式)
+   ========================================================================== */
 
-/* 详情页完整卡片样式 */
 .publication-detail {
   .publication-title {
     margin-top: 0;
@@ -92,7 +102,7 @@
   }
 
   .publication-image {
-    flex: 0 0 240px;
+    flex: 0 0 200px;           // 改小
 
     @media (max-width: 768px) {
       flex: 0 0 auto;
@@ -101,7 +111,7 @@
 
     img {
       width: 100%;
-      max-width: 280px;    // 添加：限制最大宽度
+      max-width: 240px;        // 限制最大宽度
       height: auto;
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -132,8 +142,8 @@
 
     .venue-logo {
       flex: 0 0 auto;
-      max-width: 120px;
-      max-height: 50px;
+      max-width: 100px;
+      max-height: 40px;
       object-fit: contain;
     }
   }
