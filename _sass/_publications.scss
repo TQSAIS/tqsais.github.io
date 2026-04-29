@@ -79,9 +79,9 @@
   .publication-info {
     flex: 1;
     display: flex;
-    flex-direction: row;        // 横向排列
+    flex-direction: row;        // 横向排列：文字左，logo右
     align-items: center;         // 垂直居中
-    gap: 1.5em;                  // 文字和logo之间的间距
+    gap: 1.5em;                  // 文字和logo间距
     min-width: 0;
 
     .info-text {
