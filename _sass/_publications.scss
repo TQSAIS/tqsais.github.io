@@ -1,30 +1,7 @@
-/* ==========================================================================
-   PUBLICATION LIST (列表页精简样式 + 缩略图)
-   ========================================================================== */
-
 .publication-list-item {
-  display: flex;
-  gap: 1em;
-  align-items: flex-start;
   margin-bottom: 1.5em;
   padding-bottom: 1em;
   border-bottom: 1px solid var(--global-border-color);
-
-  .publication-thumb {
-    flex: 0 0 120px;           // 缩略图固定宽度
-    
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      display: block;
-    }
-  }
-
-  .publication-meta {
-    flex: 1;
-    min-width: 0;
-  }
 
   .publication-title {
     margin: 0 0 0.3em;
@@ -102,16 +79,16 @@
   }
 
   .publication-image {
-    flex: 0 0 200px;           // 改小
+    flex: 0 0 160px;  // 从 320px 改为 160px，图片大小适中
 
     @media (max-width: 768px) {
       flex: 0 0 auto;
       width: 100%;
+      max-width: 160px;  // 移动端也限制最大宽度
     }
 
     img {
       width: 100%;
-      max-width: 240px;        // 限制最大宽度
       height: auto;
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -142,8 +119,8 @@
 
     .venue-logo {
       flex: 0 0 auto;
-      max-width: 100px;
-      max-height: 40px;
+      max-width: 120px;
+      max-height: 50px;
       object-fit: contain;
     }
   }
