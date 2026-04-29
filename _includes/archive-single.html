@@ -57,11 +57,13 @@
           </div>
           
           <div class="publication-info">
+            <div class="info-text">
+              <p class="venue-name">{{ post.venue }}</p>
+              <p class="venue-location">{{ post.date | default: "1900-01-01" | date: "%Y.%m.%d" }}, {{ post.location }}</p>
+            </div>
             {% if post.venue_logo %}
               <img class="venue-logo" src="{{ post.venue_logo | prepend: base_path }}" alt="{{ post.venue }}">
             {% endif %}
-            <p class="venue-name">{{ post.venue }}</p>
-            <p class="venue-location">{{ post.date | default: "1900-01-01" | date: "%Y.%m.%d" }}, {{ post.location }}</p>
           </div>
         </div>
         
