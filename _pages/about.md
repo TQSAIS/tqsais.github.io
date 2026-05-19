@@ -16,9 +16,9 @@ My research interest includes Deep Learning & Computer Vision in Pipeline Magnet
 
 News
 ======
- **[2026-05-17]**   :tada::tada:One paper has been accepted by The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2026) :tada::tada:
+ **[2026-05-17]**   :tada::tada:One paper has been accepted by The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining  **(KDD 2026)** :tada::tada:
 
-  **[2026-01-12]**   :tada::tada:One paper has been accepted by 2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI 2026) :tada::tada:
+  **[2026-01-12]**   :tada::tada:One paper has been accepted by 2026 IEEE 23rd International Symposium on Biomedical Imaging  **(ISBI 2026)** :tada::tada:
 
 
 
