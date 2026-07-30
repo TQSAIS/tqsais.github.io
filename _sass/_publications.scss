@@ -7,13 +7,9 @@
     margin: 0 0 0.3em;
     font-size: 1.15em;
 
-    a {
+    a, strong {
       text-decoration: none;
-      color: var(--global-link-color);
-
-      &:hover {
-        text-decoration: underline;
-      }
+      color: var(--global-text-color);
     }
   }
 
