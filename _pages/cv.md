@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,37 +9,34 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* M.S. in Department of Informations and Communications Engineering, Tokyo Institute of Technlogy, 2021.09 - 2024.04 (GPA: 96.5/100)
-* B.S. in School of Automation, Beijing Institute of Technlogy, 2017.09 - 2021.07
+<div class="cv-page">
+  <div class="cv-page__intro">
+    <div>
+      <p class="cv-page__eyebrow">Tianyi Qu</p>
+      <p>A concise web version of my education, experience, research interests, and technical background.</p>
+    </div>
+    <a class="section-link section-link--download" href="{{ base_path }}/files/Tianyi_Qu_CV.pdf" target="_blank" rel="noopener">
+      <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download PDF
+    </a>
+  </div>
 
-Work experience
-======
-Researcher & Algorithm Developer, SINOMACH Sensing Technology Co., Ltd, Shenyang Academy of Instrumentation and Science Co., Ltd, 2025.01 - Present
-  * Research Topics: Pipeline Magnetic Flux Leakage Detection, Computer Vision, Deep Learning
+  {% include cv-content.html %}
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Skills
-======
-* Python
-* Pytorch
-* C#
-* TOEFL: 106, JLPT-N2: 119
-
-Awards
-======
-Magna Cum Laude Award (6/1761, AR: ~0.34%)
-The 110th Scientific Assembly and Annual Meeting of Radiological Society of North America (RSNA 2024), Chicago, United States
-
-Third prize scholarship
-Beijing Institute of Technology, Beijing, China
-
-  
-
-
+  <section class="cv-page__honors">
+    <p class="cv-aside-card__label">Honors &amp; Awards</p>
+    <div class="cv-page__honor">
+      <time datetime="2024-12">2024.12</time>
+      <div>
+        <strong>RSNA 2024 Magna Cum Laude Award</strong>
+        <span>6/1,761 (top 0.34%) · Chicago, United States</span>
+      </div>
+    </div>
+    <div class="cv-page__honor">
+      <time datetime="2021-04">2021.04</time>
+      <div>
+        <strong>Third Prize Scholarship</strong>
+        <span>Beijing Institute of Technology, China</span>
+      </div>
+    </div>
+  </section>
+</div>
