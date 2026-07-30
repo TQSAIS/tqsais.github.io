@@ -13,9 +13,6 @@ author_profile: true
       <p class="award-page__eyebrow">Recognition</p>
       <p>Award certificate, authorship, presentation, and conference information.</p>
     </div>
-    <a class="section-link" href="{{ base_path }}/">
-      <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to home
-    </a>
   </div>
 
   {% include award-card.html %}
