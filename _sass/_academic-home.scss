@@ -368,12 +368,10 @@ html[data-theme="dark"] .award-card__badge {
 
 .home-destination-card {
   position: relative;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  display: flex;
   min-height: 138px;
   padding: 1.25rem;
   align-items: center;
-  gap: 0.9rem 1rem;
   overflow: hidden;
   color: var(--global-text-color) !important;
   background:
@@ -400,23 +398,7 @@ html[data-theme="dark"] .award-card__badge {
     border-color: rgba(154, 96, 51, 0.55);
     box-shadow: 0 12px 30px rgba(18, 24, 32, 0.08);
     transform: translateY(-2px);
-
-    .home-destination-card__action i {
-      transform: translateX(3px);
-    }
   }
-}
-
-.home-destination-card__icon {
-  display: inline-grid;
-  width: 46px;
-  height: 46px;
-  color: #925c34;
-  font-size: 1rem;
-  place-items: center;
-  background: rgba(154, 96, 51, 0.1);
-  border: 1px solid rgba(154, 96, 51, 0.16);
-  border-radius: 13px;
 }
 
 .home-destination-card__content {
@@ -434,21 +416,6 @@ html[data-theme="dark"] .award-card__badge {
     font-size: clamp(1.05rem, 2vw, 1.25rem);
     font-weight: 760;
     letter-spacing: -0.02em;
-  }
-}
-
-.home-destination-card__action {
-  display: inline-flex;
-  grid-column: 2;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--academic-muted);
-  font-size: 0.72rem;
-  font-weight: 720;
-
-  i {
-    font-size: 0.65rem;
-    transition: transform 160ms ease;
   }
 }
 
@@ -491,20 +458,6 @@ html[data-theme="dark"] .award-card__badge {
     font-size: 1rem;
     font-weight: 760;
   }
-}
-
-.cv-block__icon,
-.service-card__icon {
-  display: inline-grid;
-  flex: 0 0 auto;
-  width: 34px;
-  height: 34px;
-  color: #925c34;
-  font-size: 0.78rem;
-  place-items: center;
-  background: rgba(154, 96, 51, 0.1);
-  border: 1px solid rgba(154, 96, 51, 0.15);
-  border-radius: 10px;
 }
 
 .cv-timeline {
@@ -714,10 +667,8 @@ html[data-theme="dark"] .award-card__badge {
 }
 
 .service-card {
-  display: flex;
+  display: block;
   padding: 1.2rem 1.3rem;
-  gap: 1rem;
-  align-items: flex-start;
   background:
     linear-gradient(135deg, rgba(154, 96, 51, 0.055), transparent 50%),
     var(--global-bg-color);
@@ -810,7 +761,6 @@ html[data-theme="dark"] .award-card__badge {
   .publication-card,
   .section-link,
   .home-destination-card,
-  .home-destination-card__action i,
   .award-card__visual img {
     transition: none;
   }
