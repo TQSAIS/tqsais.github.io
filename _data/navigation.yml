@@ -13,6 +13,6 @@ main:
   - title: "Award"
     url: /#award
   - title: "CV"
-    url: /#cv
+    url: /cv/
   - title: "Academic Service"
-    url: /#academic-service
+    url: /academic-service/
