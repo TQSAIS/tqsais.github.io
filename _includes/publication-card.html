@@ -45,9 +45,6 @@
     </div>
 
     <div class="publication-card__actions">
-      <a href="{{ base_path }}{{ publication.url }}" class="publication-card__action">
-        View details <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
       {% if publication.paperurl %}
         <a href="{{ publication.paperurl }}" class="publication-card__action publication-card__action--paper" target="_blank" rel="noopener">
           <i class="fas fa-file-lines" aria-hidden="true"></i> Paper
