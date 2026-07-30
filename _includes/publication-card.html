@@ -3,17 +3,6 @@
 
 <article class="publication-card" itemscope itemtype="https://schema.org/ScholarlyArticle">
   <a class="publication-card__visual" href="{{ base_path }}{{ publication.url }}" aria-label="View {{ publication.title | escape }}">
-    {% if publication.core_image %}
-      <img
-        src="{{ publication.core_image | prepend: base_path }}"
-        alt="{{ publication.core_image_alt | default: publication.title | escape }}"
-        loading="lazy"
-      >
-    {% endif %}
-  </a>
-
-  <div class="publication-card__content">
-    <div class="publication-card__topline">
       {% if publication.venue_logo %}
         <img
           class="publication-card__logo"
@@ -22,6 +11,17 @@
           loading="lazy"
         >
       {% endif %}
+  </a>
+
+  <div class="publication-card__content">
+    <div class="publication-card__topline">
+    {% if publication.core_image %}
+      <img
+        src="{{ publication.core_image | prepend: base_path }}"
+        alt="{{ publication.core_image_alt | default: publication.title | escape }}"
+        loading="lazy"
+      >
+    {% endif %}
     </div>
 
     <h3 class="publication-card__title" itemprop="headline">
