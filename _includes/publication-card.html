@@ -38,17 +38,8 @@
       {% if publication.venue %}<span>{{ publication.venue }}</span>{% endif %}
       {% if publication.location %}
         <span class="publication-card__location">
-          <i class="fas fa-location-dot" aria-hidden="true"></i>
           {{ publication.location }}
         </span>
-      {% endif %}
-    </div>
-
-    <div class="publication-card__actions">
-      {% if publication.paperurl %}
-        <a href="{{ publication.paperurl }}" class="publication-card__action publication-card__action--paper" target="_blank" rel="noopener">
-          <i class="fas fa-file-lines" aria-hidden="true"></i> Paper
-        </a>
       {% endif %}
     </div>
   </div>
