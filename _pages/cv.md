@@ -15,9 +15,6 @@ redirect_from:
       <p class="cv-page__eyebrow">Tianyi Qu</p>
       <p>A concise web version of my education, experience, research interests, and technical background.</p>
     </div>
-    <a class="section-link section-link--download" href="{{ base_path }}/files/Tianyi_Qu_CV.pdf" target="_blank" rel="noopener">
-      <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download PDF
-    </a>
   </div>
 
   {% include cv-content.html %}
