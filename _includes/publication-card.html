@@ -1,0 +1,61 @@
+{% include base_path %}
+{% assign publication = include.post | default: post %}
+
+<article class="publication-card" itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <a class="publication-card__visual" href="{{ base_path }}{{ publication.url }}" aria-label="View {{ publication.title | escape }}">
+    {% if publication.core_image %}
+      <img
+        src="{{ publication.core_image | prepend: base_path }}"
+        alt="{{ publication.core_image_alt | default: publication.title | escape }}"
+        loading="lazy"
+      >
+    {% endif %}
+  </a>
+
+  <div class="publication-card__content">
+    <div class="publication-card__topline">
+      {% if publication.venue_short %}
+        <span class="publication-card__badge">{{ publication.venue_short }}</span>
+      {% endif %}
+      {% if publication.venue_logo %}
+        <img
+          class="publication-card__logo"
+          src="{{ publication.venue_logo | prepend: base_path }}"
+          alt="{{ publication.venue_short | default: publication.venue | strip_html | escape }} logo"
+          loading="lazy"
+        >
+      {% endif %}
+    </div>
+
+    <h3 class="publication-card__title" itemprop="headline">
+      <a href="{{ base_path }}{{ publication.url }}">{{ publication.title }}</a>
+    </h3>
+
+    {% if publication.authors %}
+      <div class="publication-card__authors" itemprop="author">
+        {{ publication.authors | markdownify }}
+      </div>
+    {% endif %}
+
+    <div class="publication-card__venue">
+      {% if publication.venue %}<span>{{ publication.venue }}</span>{% endif %}
+      {% if publication.location %}
+        <span class="publication-card__location">
+          <i class="fas fa-location-dot" aria-hidden="true"></i>
+          {{ publication.location }}
+        </span>
+      {% endif %}
+    </div>
+
+    <div class="publication-card__actions">
+      <a href="{{ base_path }}{{ publication.url }}" class="publication-card__action">
+        View details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+      {% if publication.paperurl %}
+        <a href="{{ publication.paperurl }}" class="publication-card__action publication-card__action--paper" target="_blank" rel="noopener">
+          <i class="fas fa-file-lines" aria-hidden="true"></i> Paper
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</article>
