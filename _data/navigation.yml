@@ -11,7 +11,7 @@ main:
   - title: "Publications"
     url: /publications/
   - title: "Award"
-    url: /#award
+    url: /award
   - title: "CV"
     url: /cv/
   - title: "Academic Service"
