@@ -10,9 +10,9 @@
 main:
   - title: "Publications"
     url: /publications/
-
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-
+  - title: "Award"
+    url: /#award
+  - title: "CV"
+    url: /#cv
+  - title: "Academic Service"
+    url: /#academic-service
