@@ -424,39 +424,39 @@ html[data-theme="dark"] .award-card__badge {
 
 .cv-overview {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
-  gap: 1.15rem;
-  align-items: start;
-}
-
-.cv-overview__main,
-.cv-overview__aside {
-  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
-.cv-block,
-.cv-aside-card,
-.cv-page__honors {
+.cv-block {
+  min-width: 0;
+  padding: 1.2rem;
   background: var(--global-bg-color);
   border: 1px solid var(--global-border-color);
   border-radius: 16px;
 }
 
-.cv-block {
-  padding: 1.25rem;
+.cv-block--wide {
+  grid-column: 1 / -1;
 }
 
 .cv-block__heading {
   display: flex;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
   align-items: center;
-  gap: 0.65rem;
+  border-bottom: 1px solid var(--global-border-color);
 
   h3 {
     margin: 0;
+    padding: 0;
+    color: var(--global-text-color);
     font-size: 1rem;
     font-weight: 760;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    border: 0;
   }
 }
 
@@ -497,7 +497,8 @@ html[data-theme="dark"] .award-card__badge {
   }
 }
 
-.cv-entry__date {
+.cv-entry__date,
+.cv-uniform-item__meta {
   padding-top: 0.05rem;
   color: #8c5730;
   font-size: 0.71rem;
@@ -506,20 +507,25 @@ html[data-theme="dark"] .award-card__badge {
   letter-spacing: 0.025em;
 }
 
-.cv-entry__body {
+.cv-entry__body,
+.cv-uniform-item__body {
   h4 {
     margin: 0 0 0.25rem;
-    font-size: 0.94rem;
+    color: var(--global-text-color);
+    font-size: 0.84rem;
     font-weight: 760;
+    line-height: 1.4;
   }
 
   p {
     margin: 0.12rem 0 0;
     color: var(--academic-muted);
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     line-height: 1.5;
   }
+}
 
+.cv-entry__body {
   .cv-entry__organization {
     color: var(--global-text-color);
     font-weight: 680;
@@ -531,59 +537,52 @@ html[data-theme="dark"] .award-card__badge {
   }
 }
 
-.cv-aside-card {
-  padding: 1rem 1.05rem;
-
-  > p:last-child {
-    margin: 0;
-    color: var(--academic-muted);
-    font-size: 0.76rem;
-    line-height: 1.65;
-  }
-}
-
-.cv-aside-card__label {
-  margin: 0 0 0.65rem;
-  color: var(--global-text-color);
-  font-size: 0.7rem;
-  font-weight: 820;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.cv-tags {
-  margin-top: 0;
-
-  span {
-    padding: 0.33rem 0.5rem;
-    font-size: 0.67rem;
-    background: var(--academic-surface);
-  }
-}
-
-.cv-language-list {
+.cv-plain-list {
   display: grid;
-  gap: 0.65rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  list-style: none;
 
-  > div {
-    display: grid;
-    gap: 0.1rem;
-  }
-
-  dt {
+  li {
     margin: 0;
+    padding: 0.55rem 0.65rem;
     color: var(--global-text-color);
-    font-size: 0.75rem;
-    font-weight: 740;
+    font-size: 0.76rem;
+    font-weight: 680;
+    line-height: 1.4;
+    background: var(--academic-surface);
+    border: 1px solid var(--global-border-color);
+    border-radius: 9px;
+  }
+}
+
+.cv-uniform-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.cv-uniform-item {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  padding: 0.8rem 0;
+  gap: 0.8rem;
+  border-top: 1px solid var(--global-border-color);
+
+  &:first-child {
+    padding-top: 0;
+    border-top: 0;
   }
 
-  dd {
-    margin: 0;
-    color: var(--academic-muted);
-    font-size: 0.7rem;
-    line-height: 1.4;
+  &:last-child {
+    padding-bottom: 0;
   }
+}
+
+.cv-uniform-item--single {
+  grid-template-columns: 1fr;
 }
 
 .award-page,
@@ -625,40 +624,6 @@ html[data-theme="dark"] .award-card__badge {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-
-.cv-page__honors {
-  display: grid;
-  margin-top: 1rem;
-  padding: 1.15rem;
-  gap: 0.85rem;
-}
-
-.cv-page__honor {
-  display: grid;
-  grid-template-columns: 88px minmax(0, 1fr);
-  gap: 0.9rem;
-
-  time {
-    color: #8c5730;
-    font-size: 0.72rem;
-    font-weight: 800;
-  }
-
-  > div {
-    display: grid;
-    gap: 0.15rem;
-  }
-
-  strong {
-    font-size: 0.82rem;
-  }
-
-  span {
-    color: var(--academic-muted);
-    font-size: 0.73rem;
-  }
-}
-
 
 /* Academic service */
 
@@ -709,6 +674,10 @@ html[data-theme="dark"] .award-card__badge {
     grid-template-columns: 1fr;
   }
 
+  .cv-block--wide {
+    grid-column: auto;
+  }
+
   .award-card__visual {
     border-right: 0;
     border-bottom: 1px solid var(--global-border-color);
@@ -754,6 +723,10 @@ html[data-theme="dark"] .award-card__badge {
   .cv-entry {
     grid-template-columns: 1fr;
     gap: 0.28rem;
+  }
+
+  .cv-plain-list {
+    grid-template-columns: 1fr;
   }
 }
 
