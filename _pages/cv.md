@@ -13,7 +13,6 @@ redirect_from:
   <div class="cv-page__intro">
     <div>
       <p class="cv-page__eyebrow">Tianyi Qu</p>
-      <p>A concise web version of my education, experience, research interests, and technical background.</p>
     </div>
   </div>
 
