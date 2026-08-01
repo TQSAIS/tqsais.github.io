@@ -12,7 +12,7 @@ redirect_from:
 <div class="cv-page">
   <div class="cv-page__intro">
     <div>
-      <p class="cv-page__eyebrow">Tianyi Qu</p>
+      <p class="cv-page__eyebrow"></p>
     </div>
   </div>
 
